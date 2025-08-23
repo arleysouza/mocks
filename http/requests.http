@@ -1,0 +1,33 @@
+### Login
+# @name login
+POST http://localhost:3001/users/login
+Content-Type: application/json
+
+{
+  "username": "jose.souza",
+  "password": "123456"
+}
+
+
+### Register User
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+  "username": "jose.souza",
+  "password": "123456" 
+}
+
+### Register User
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+  "username": "ana.maria",
+  "password": "123456" 
+}
+
+### Logout
+POST http://localhost:3001/users/logout
+Authorization: Bearer {{login.response.body.data.token}}
+
