@@ -11,7 +11,7 @@ import crypto from "crypto";
 export const createUser = async (req: Request, res: Response): Promise<void> => {
   try {
     const { username, password } = req.body;
-
+console.log("createUser:", username, password);
     const hashedPassword = await bcrypt.hash(password, 10);
 
     await db.query(
@@ -40,7 +40,7 @@ export const createUser = async (req: Request, res: Response): Promise<void> => 
 export const loginUser = async (req: Request, res: Response): Promise<void> => {
   try {
     const { username, password } = req.body;
-
+console.log("loginUser:", username, password);
     const result = await db.query("SELECT * FROM users WHERE username = $1", [
       username,
     ]);

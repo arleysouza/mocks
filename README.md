@@ -84,6 +84,7 @@ npm run dev
 ```
 
 6. Executando os testes
+
 Como não há containers externos, os testes com mocks rodam diretamente:
 ```bash
 npm run test
